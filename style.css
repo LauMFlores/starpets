@@ -1,3 +1,119 @@
-body {
-    background-color: cornflowerblue;
+:root {
+    --headergradiente1:#00000093;
+    --headergradiente2:#252121af;
+    --headergradiente3:#f8f8f8;
+    --headertexto:#ffffff;
+    --headerhover:#ffffff44;
+    --color:#fff;
+    --color:#fff;
 }
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* 
+------------ HEADER ------------
+*/
+
+/*  - mediaquery tal vez a los 768px para modificaciones header.
+    - Probe hacer las font responsive con unidades de viewport. Probe despues funcion clamp con mezcla de unidades. Ver si sirve o mejor con mediaqueries. */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border: 2px solid black;
+
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(
+     var(--headergradiente1) 60%,
+     var(--headergradiente2) 80%, 
+     var(--headergradiente3)
+    );
+    display: flex;
+    gap: 20px;
+}
+
+.nav-logo {
+    width: 20%;
+    flex-grow: 1;
+}
+
+.nav-logo-link {
+
+}
+
+.nav-logo-img {
+    max-width: 100%;
+    min-width: 100px;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    padding-top: 10px;
+    object-fit: contain;
+    object-position: center;
+    transition: all 0.5s;
+}
+
+.nav-logo-img:hover {
+    filter: invert(1);
+    margin-top: 10px;
+
+}
+
+.nav-menu {
+    flex-grow: 5;
+    display: flex;
+    padding-right: 10px;
+}
+
+.nav-menu-item {
+   flex-grow: 1;
+}
+
+.nav-menu-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 26px;
+    font-size: 22px;
+    font-size: clamp(12px, 2vw, 32px);
+    color: var(--headertexto);
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 5px;
+    letter-spacing: 0.3vw;
+
+    transition: all 0.8s;
+}
+
+.nav-menu-link:hover {
+    padding-top: 40px;
+    font-size: 26px;
+    font-size: clamp(14px, 2.4vw, 36px);
+    letter-spacing: max(5px, 0.6vw);
+    background-color: var(--headerhover);
+    border-right: 3px solid var(--headergradiente3)
+    /* text-decoration: underline; */
+}
+
+/* 
+------------ FIN HEADER ------------
+*/

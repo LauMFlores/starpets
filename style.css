@@ -4,6 +4,10 @@
     --headergradiente3:#f8f8f8;
     --headertexto:#ffffff;
     --headerhover:#ffffff44;
+
+    --principalh1fondo: #000000;
+    --principalh1texto: #a09b82;
+    --principalh1sombra:#daa520a2;
     --color:#fff;
     --color:#fff;
 }
@@ -14,6 +18,10 @@
     padding: 0;
     margin: 0;
     list-style: none;
+}
+
+img {
+    max-width: 100%;
 }
 
 body {
@@ -30,7 +38,8 @@ body {
     - Probe hacer las font responsive con unidades de viewport. Probe despues funcion clamp con mezcla de unidades. Ver si sirve o mejor con mediaqueries. */
 
 header {
-    position: relative;
+    position: absolute;
+    z-index: 20;
     width: 100%;
     height: 100px;
 }
@@ -114,4 +123,42 @@ header {
 
 /* 
 ------------ FIN HEADER ------------
+*/
+
+/* 
+------------ INICIO PRINCIPAL ----------
+*/
+
+.principal {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--headergradiente2);
+}
+
+.principal-img {
+    width: 100%;
+    height:100vh;
+    object-fit: cover;
+}
+
+.principal-h1 {
+    position: absolute;
+    top: 80vh;
+    width: 100%;
+    height: 10vh;
+    min-height: 50px;
+    padding: 2.5vh;
+
+    font-size: 5vh;
+    color: var(--principalh1texto);
+    text-shadow: 10px -5px 10px var(--principalh1sombra);
+    text-align: center;
+    letter-spacing: 12px; 
+    background-color: var(--principalh1fondo);
+    opacity: 0.8;
+}
+
+/* 
+------------ FIN PRINCIPAL ----------
 */

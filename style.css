@@ -1,6 +1,6 @@
 :root {
-    --headergradiente1:#00000093;
-    --headergradiente2:#252121af;
+    --headergradiente1:#00000099;
+    --headergradiente2:#25212199;
     --headergradiente3:#f8f8f8;
     --headertexto:#ffffff;
     --headerhover:#ffffff44;
@@ -12,10 +12,26 @@
     --principalh3fondo: #000000;
     --principalh3outline:#e6dddd;
 
-    --color:#fff;
+    --footerfondo:#ffc0cba9;
+    --footerh4bordertop:#000000cc;
+    --footerh4borderbottom:#00000080;
+    --footerh4texto:#000000;
+    --footergradiente1:#dce2c3cc;
+    --footergradiente2:#f09dc6c5;
+    --footergradiente3:#f1bde4b4;
+    --footerborderright: #daa520;
+    --footerlinkborderbottom:#745915; 
+    --footerlinkfondo: #ac85af7a;
+    --footerlinkhoverborder: #ffffff;
+    --footeriframeborde: #ffffff;
+    --footeriframesombra: #000000;
+    --footeriframefondotexto: #000000;
+    --footeriframetexto:  #ffffff;
+
     --color:#fff;
     --color:#fff;
 }
+
 
 
 * {
@@ -128,7 +144,7 @@ header {
 
 /* 
 ------------ INICIO PRINCIPAL ----------
-        --- inicio pricipal: presentacion ----
+      ----- inicio pricipal: presentacion ----
 */
 
 .principal-presentacion {
@@ -204,10 +220,11 @@ header {
 
 .intro-contacto {
     grid-column: span 2;
+    margin-bottom: 80px;
 }
 
 /* 
-        --- fin principal:contenido ----  
+    ----- fin principal:contenido ----  
 ------------- FIN PRINCIPAL ------------------
 */
 
@@ -215,9 +232,122 @@ header {
 ------------ INICIO FOOTER ----------
 */
 
+footer {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+    background-color: var(--footerfondo);
+}
+
+.footer-contenedor h4 {
+    height: 7vh;
+    min-height: 45px;
+    margin-bottom: 1.5vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1vh;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--footerh4texto);
+    text-align: center;
+    letter-spacing: 1px;
+    border-top: 10px solid var(--footerh4bordertop);
+    border-bottom: 2px solid var(--footerh4borderbottom);
+    background-image: linear-gradient(
+      to right,
+      var(--footergradiente1) 20%,
+      var(--footergradiente2),
+      var(--footergradiente3)
+    );
+    opacity: 0.7;
+}
+
+.footer-contenedor {
+    border-right: 2px solid var(--footerborderright);
+}
+
+.footer-contenedor-seguinos {
+    width: 80%;
+    min-height: 80px;
+    margin: 1vw;
+    margin-top: 0;
+    text-align: center;
+}
+
+.footer-contenedor-seguinos a {
+    width: 100%;
+    height: 12vh;
+    min-height: 65px;;
+    max-height: 75px;
+    padding: 14px; 
+    margin: 1vw;
+    margin-top: 0;
+    display: block;
+    background-color: var(--footerlinkfondo);
+    border-bottom: 3px dashed var(--footerlinkborderbottom);
+    transition: all 0.8s;
+}
+
+.footer-contenedor-seguinos img {
+    height: 5vh;
+    min-height: 36px;
+    max-height: 42px;
+}
+
+.footer-contenedor-seguinos a:hover {
+   padding-top: 22px;
+   background-image: linear-gradient(
+        to right,
+        var(--footergradiente1) 20%,
+        var(--footergradiente2),
+        var(--footergradiente3)
+        );
+    border: 2px solid var(--footerlinkhoverborder);
+}
+
+.footer-contenedor-escribinos {
+    text-align: center;
+}
+
+.material-symbols-outlined {
+    display: block;
+    font-size: 32px;
+    padding-bottom: 5px;
+}
+
+.footer-contenedor-escribinos p {
+    padding: 0.3vw 0.5vw 1.5vw;
+    font-size: 14px;
+    letter-spacing: 0.8px;  
+}
+
+.footer-contenedor-visitanos {
+    border: 8px solid var(--footeriframeborde);
+    box-shadow: 0 0 5px var(--footeriframesombra) ;
+    padding: 10px;
+    text-align: center;
+    margin: 20px; 
+}
+
+.footer-contenedor-visitanos iframe {
+    max-width: 100%;
+    max-height: 20vh;
+}
+
+.footer-contenedor-visitanos p {
+    padding: 3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    background-color: var(--footeriframefondotexto);
+    color: var(--footeriframetexto);
+    opacity: 0.7;
+}
+
 /* 
 ------------ FIN FOOTER ----------
 */
+
 
 /* 
 ---------- Mediaqueries ----------
@@ -240,5 +370,19 @@ header {
     }
     .intro-contacto {
         grid-row:3;
+    }
+
+    footer {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .footer-contenedor-seguinos {
+        width: 100%;
+        padding: 0 2vw;
+        margin: 0;
+        display: flex;
+        gap: 2vw;
+        justify-content: space-evenly;
     }
 }

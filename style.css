@@ -8,6 +8,11 @@
     --principalh1fondo: #000000;
     --principalh1texto: #a09b82;
     --principalh1sombra:#daa520a2;
+    --principalh3texto: #ffffff;
+    --principalh3fondo: #000000;
+    --principalh3outline:#e6dddd;
+
+    --color:#fff;
     --color:#fff;
     --color:#fff;
 }
@@ -61,10 +66,6 @@ header {
 .nav-logo {
     width: 20%;
     flex-grow: 1;
-}
-
-.nav-logo-link {
-
 }
 
 .nav-logo-img {
@@ -127,38 +128,117 @@ header {
 
 /* 
 ------------ INICIO PRINCIPAL ----------
+        --- inicio pricipal: presentacion ----
 */
 
-.principal {
+.principal-presentacion {
     position: relative;
     width: 100%;
     height: 100vh;
     background-color: var(--headergradiente2);
 }
 
-.principal-img {
+.principal-presentacion-img {
     width: 100%;
     height:100vh;
     object-fit: cover;
 }
 
-.principal-h1 {
+.principal-presentacion-texto {
     position: absolute;
-    top: 80vh;
+    top: 75vh;
     width: 100%;
-    height: 10vh;
     min-height: 50px;
     padding: 2.5vh;
-
-    font-size: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    font-size: 2.2vh;
     color: var(--principalh1texto);
     text-shadow: 10px -5px 10px var(--principalh1sombra);
     text-align: center;
     letter-spacing: 12px; 
+    letter-spacing: 1.8vh;
     background-color: var(--principalh1fondo);
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 /* 
------------- FIN PRINCIPAL ----------
+        --- inicio principal:contenido ---- 
 */
+
+.principal-contenido {
+    padding: 1vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    column-gap: 4vw;
+    row-gap: 7vh;
+}
+
+.principal-contenido h3 {
+    height:6vh;
+    min-height: 40px;
+    margin-bottom: 20px;
+    padding-top: 2vh;
+    padding-bottom: 2.3vh;
+    font-size: 18px;
+    font-size: clamp(14px, 20px, 3vw);
+    color: var(--principalh3texto);
+    text-align: center;
+    letter-spacing: 5px;
+    background-color: var(--principalh3fondo);
+    outline: 2px solid var(--principalh3outline);
+    outline-offset: -8px;
+}
+
+.principal-contenido p {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-indent: 20px;
+    line-height: 200%;
+    text-align: justify;   
+}
+
+.intro-contacto {
+    grid-column: span 2;
+}
+
+/* 
+        --- fin principal:contenido ----  
+------------- FIN PRINCIPAL ------------------
+*/
+
+/* 
+------------ INICIO FOOTER ----------
+*/
+
+/* 
+------------ FIN FOOTER ----------
+*/
+
+/* 
+---------- Mediaqueries ----------
+*/
+
+@media (max-width: 1080px) {
+    .principal-contenido {
+        padding: 5vw 1vw;
+        column-gap: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .intro-agencia {
+        grid-row:1;
+    }
+
+    .intro-estrellas {
+        grid-row:2;
+    }
+    .intro-contacto {
+        grid-row:3;
+    }
+}

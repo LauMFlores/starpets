@@ -229,6 +229,42 @@ header {
 */
 
 /* 
+------------ INICIO AGENCIA---------- 
+*/
+.agencia {
+    position: relative; 
+    top: 100px;
+    width: 100%;
+    height: 100vh;
+}
+
+ .agencia-h1 {
+    height:8vh;
+    min-height: 40px;
+    margin-bottom: 20px;
+    padding-top: 2vh;
+    padding-bottom: 2.3vh;
+    font-size: 18px;
+    font-size: clamp(14px, 20px, 3vw);
+    color: var(--principalh3texto);
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: var(--principalh3fondo);
+    outline: 2px solid var(--principalh3outline);
+    outline-offset: -8px;
+}
+
+.agencia-contenido {
+    text-align: center;
+}
+
+/* 
+------------- FIN AGENCIA ------------------
+*/
+
+
+
+/* 
 ------------ INICIO FOOTER ----------
 */
 
@@ -386,3 +422,4 @@ footer {
         justify-content: space-evenly;
     }
 }
+

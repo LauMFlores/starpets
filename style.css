@@ -483,6 +483,15 @@ header {
 
 /* --------------Inicio:estrellas galeria------------- */
 
+#cerrar-img-odi-1,
+#cerrar-img-odi-2,
+#cerrar-img-odi-3,
+#cerrar-img-odi-4,
+#cerrar-img-odi-5,
+#cerrar-img-odi-6 {
+    scroll-margin-top: 220px;
+}
+
 .estrellas-galeria {
     width: 90%;
     height: auto;

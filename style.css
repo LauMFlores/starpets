@@ -390,7 +390,7 @@ header {
     );
 }
 
- .estrellas-h3 {
+.estrellas-h3 {
     width: 90%;
     height: 70px;
     margin-left: auto;
@@ -405,7 +405,7 @@ header {
     border: 2px solid var(--estrellas-h3-border);
     border-right: 15px solid var(--estrellas-h3-border-right);  
     background-color: var(--estrellas-h3-background);
- }
+}
 
  /* --------------Inicio:estrellas bio------------- */
 
@@ -575,6 +575,56 @@ header {
 /* ----------- Fin: estrellas galeria ----------- */
 /* 
 ------------- FIN ESTRELLAS ------------------
+*/
+
+/*
+------------- INICIO CONTACTO ------------------ 
+*/
+.contacto {
+position: relative;
+top: 100px;
+width: 100%;
+height: auto;
+margin-bottom: 180px;
+}
+
+.contacto-h1 {
+    height:8vh;
+    min-height: 40px;
+    margin-bottom: 20px;
+    padding-top: 2vh;
+    padding-bottom: 2.3vh;
+    font-size: 18px;
+    font-size: clamp(14px, 20px, 3vw);
+    color: var(--principalh3texto);
+    text-align: center;
+    letter-spacing: 8px;
+    background-color: var(--principalh3fondo);
+    outline: 2px solid var(--principalh3outline);
+    outline-offset: -8px;  
+}
+
+.contacto-contenido {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contacto-formulario {
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.contacto-formulario *{
+    display: block;
+    margin-top: 10px;
+}
+
+.contacto-formulario .inline{
+    display: inline;
+}
+/*
+------------- FIN CONTACTO ------------------  
 */
 
 /* 

@@ -312,6 +312,13 @@ header {
 }
 
 /* --------------Inicio: estrellas botonera -----------*/
+#milo,
+#odin,
+#rosita,
+#jade {
+    scroll-margin-top: 220px;
+}
+
 .estrellas-nav {
     position: sticky;
     top: 200px;

@@ -72,9 +72,6 @@ body {
 ------------ HEADER ------------
 */
 
-/*  - mediaquery tal vez a los 768px para modificaciones header.
-    - Probe hacer las font responsive con unidades de viewport. Probe despues funcion clamp con mezcla de unidades. Ver si sirve o mejor con mediaqueries. */
-
 header {
     position: absolute;
     z-index: 20;
@@ -135,7 +132,7 @@ header {
     height: 100%;
     padding-top: 26px;
     font-size: 22px;
-    font-size: clamp(12px, 2vw, 32px);
+    font-size: clamp(14px, 8px + 1.2vw, 30px);
     color: var(--headertexto);
     text-decoration: none;
     text-align: center;
@@ -148,7 +145,7 @@ header {
 .nav-menu-link:hover {
     padding-top: 40px;
     font-size: 26px;
-    font-size: clamp(14px, 2.4vw, 36px);
+    font-size: clamp(16px, 8px + 1.3vw, 32px);
     letter-spacing: max(5px, 0.6vw);
     background-color: var(--headerhover);
     border-right: 3px solid var(--headergradiente3)
@@ -216,7 +213,7 @@ header {
     padding-top: 2vh;
     padding-bottom: 2.3vh;
     font-size: 18px;
-    font-size: clamp(14px, 20px, 3vw);
+    font-size: clamp(13px, 10px + 1vw, 20px);
     color: var(--principalh3texto);
     text-align: center;
     letter-spacing: 5px;
@@ -459,14 +456,12 @@ header {
 .talento-nombre {
     font-size: 25px;
     text-align: center;
-
 }
 
 .talento-niveles {
     display: flex;
     gap: 5px;
-    padding: 10px;
-    
+    padding: 10px;  
 }
 
 .talento-niveles *{
@@ -482,15 +477,6 @@ header {
 /* ----------- Fin: estrellas talentos ----------- */
 
 /* --------------Inicio:estrellas galeria------------- */
-
-#cerrar-img-odi-1,
-#cerrar-img-odi-2,
-#cerrar-img-odi-3,
-#cerrar-img-odi-4,
-#cerrar-img-odi-5,
-#cerrar-img-odi-6 {
-    scroll-margin-top: 220px;
-}
 
 .estrellas-galeria {
     width: 90%;
@@ -523,7 +509,6 @@ header {
     transform: scale(1.2, 1.2);
     border: 2px solid black;
 }
-
 
 .estrellas-galeria-oculto div{
     background-color: #000000da;
@@ -559,10 +544,10 @@ header {
 }
 
 .estrellas-galeria-oculto div img{
-    width: 100%;
+    width: 120%;
     height: auto;
-    max-height: 70vh;
-    margin-top: 12vh;
+    max-height: 73vh;
+    margin-top: 7vh;
     margin-left: auto;
     margin-right: auto;
     object-fit: contain;   
@@ -835,7 +820,7 @@ footer {
 
     .estrellas-h2 {
         position: sticky;
-        top: 150px;
+        top: 80px;
         height: 50px;
         font-size: clamp(24px, 18px + 1.5vw, 32px);
         border: 2px solid var(--estrellas-h2-border);
@@ -917,59 +902,46 @@ footer {
     }
 }
 
-@media (max-width: 700px) and (max-height: 500px) {
-    .estrellas {
-    display: grid;
-    grid-template-columns: 25% 1fr;
+
+/* ----------animation principal------------- */
+
+   .animation-scroll{
+      position: absolute;
+        top: 90%;
+        left: 90%;
+        transform: translate(-50%, -50%);
     }
-    .estrellas-nav {
-    position: sticky;
-    top: 100px;
-    width: 20px;
-    height: 60vh;
-    margin-right: 10px;
-    background-image: linear-gradient(
-        var(--estrellas-nav-gradiente1),
-        var(--estrellas-nav-gradiente2)    
-    );
-    z-index: 10;
-}
-
-.estrellas-menu-item {
-    padding-left: 10px;
-}
-
-.estrellas-menu-link {
-    height: 10vh;
-    padding: 0;
-    margin:0;
-    width: 60px;
-    padding: 10px;
-    display: flex;
-    align-items: flex-end;
-    font-size: 14px;
-    font-style: italic;
-    color: var(--estrellas-menu-texto-borde);
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-shadow: 1px -1px var(--estrellas-menu-texto-sombra);
-    border-bottom: 2px solid var(--estrellas-menu-texto-borde);
-    transition: all 1.5s;
-}
-
-.estrellas-menu-link:hover {
-    height: 10vh;
-    width: 100px;
-    padding: 10px;
-    padding-left: 30px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    background-color: var(--estrellas-menu-hover-fondo);
-    border: none;
-}
-
-.estrellas-nav:hover {
-    height: 60vh;
-    min-height: 60vh;
-}
-}
+        
+    .animation-scroll span{
+        display: block;
+        width: 2.5vw;
+        height: 2.5vw;
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+        transform: rotate(45deg);
+        margin: -10px;
+        animation: animate-scroll 3s infinite;
+    }
+        
+    .animation-scroll span:nth-child(2){
+        animation-delay: -0.2s;
+    }
+        
+    .animation-scroll span:nth-child(3){
+        animation-delay: -0.4s;
+    }
+        
+    @keyframes animate-scroll{
+            
+        0%{
+            opacity: 0;
+            transform: rotate(45deg) translate(-20px, -20px);
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            transform: rotate(45deg) translate(20px, 20px);
+        }
+    }

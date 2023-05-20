@@ -29,7 +29,7 @@
     --estrellas-h3-background: #2aa7b3b3;
 
 
-    --footerfondo:#ffc0cba9;
+    --footerfondo:#f8c3cca9;
     --footerh4bordertop:#000000cc;
     --footerh4borderbottom:#00000080;
     --footerh4texto:#000000;
@@ -47,6 +47,7 @@
 
     --color:#fff;
     --color:#fff;
+
 }
 
 
@@ -198,7 +199,10 @@ header {
 */
 
 .principal-contenido {
+    width: 80%;
     padding: 1vw;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -633,11 +637,15 @@ margin-bottom: 180px;
 
 footer {
     width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
     height: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1vw;
+    gap: 3vw;
+    /* gap:0; */
     background-color: var(--footerfondo);
+
 }
 
 .footer-contenedor h4 {
@@ -663,7 +671,9 @@ footer {
 }
 
 .footer-contenedor {
-    border-right: 2px solid var(--footerborderright);
+    border-right: 1px solid var(--footerborderright);
+    border-left: 1px solid var(--footerborderright);
+    background-color: var(--footerfondo);
 }
 
 .footer-contenedor-seguinos {
@@ -683,15 +693,20 @@ footer {
     margin: 1vw;
     margin-top: 0;
     display: block;
+    color: white;
     background-color: var(--footerlinkfondo);
     border-bottom: 3px dashed var(--footerlinkborderbottom);
-    transition: all 0.8s;
+    transition: all 0.7s;
 }
 
 .footer-contenedor-seguinos img {
     height: 5vh;
     min-height: 36px;
     max-height: 42px;
+}
+
+.footer-contenedor-seguinos a:visited {
+    color:white;
 }
 
 .footer-contenedor-seguinos a:hover {
@@ -702,7 +717,7 @@ footer {
         var(--footergradiente2),
         var(--footergradiente3)
         );
-    border: 2px solid var(--footerlinkhoverborder);
+    border: 2.5px solid var(--footerlinkhoverborder);
 }
 
 .footer-contenedor-escribinos {
@@ -760,6 +775,14 @@ footer {
     width: 100%;
     height: auto;
  }
+
+ footer {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    gap: 20px;
+ }
+
+
 }
 
 @media (max-width: 1080px){
@@ -769,6 +792,7 @@ footer {
     }
 
     .principal-contenido {
+        width:100%;
         padding: 5vw 1vw;
         column-gap: 0;
         grid-template-columns: 100%;
@@ -905,18 +929,11 @@ footer {
     }
 
     footer {
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(3, auto);
+        padding-left: 0;
+        padding-right: 0;   
     }
 
-    .footer-contenedor-seguinos {
-        width: 100%;
-        padding: 0 2vw;
-        margin: 0;
-        display: flex;
-        gap: 2vw;
-        justify-content: space-evenly;
-    }
+ 
 }
 
 @media (max-width: 720px){
@@ -949,6 +966,23 @@ footer {
     .estrellas-galeria img:hover{
         transform: scale(0.9, 0.9);
         border: 2px solid black;
+    }
+
+     footer {
+        padding-left: 0;
+        padding-right:0;
+        gap: 10px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .footer-contenedor-seguinos {
+        width: 100%;
+        padding: 0 2vw;
+        margin: 0;
+        display: flex;
+        gap: 2vw;
+        justify-content: space-evenly;
     }
 }
 

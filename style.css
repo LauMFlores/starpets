@@ -8,9 +8,9 @@
     --principalh1fondo: #000000;
     --principalh1texto: #a09b82;
     --principalh1sombra:#daa520a2;
-    --principalh3texto: #ffffff;
-    --principalh3fondo: #000000;
-    --principalh3outline:#e6dddd;
+    --h1-color: #ffffff;
+    --h1-bgcolor: #000000;
+    --h1-outline:#e6dddd;
 
     --estrellas-nav-gradiente1: #87cfebcc;
     --estrellas-nav-gradiente2: #16152cb3;
@@ -47,10 +47,32 @@
 
     --color:#fff;
     --color:#fff;
+    
+    --contacto-bgimage: linear-gradient(
+        to left bottom,
+        rgba(15, 125, 129, 0.726) 20%,
+        white 10%,
+        white 20%,
+        rgba(5, 4, 24, 0.733) 80%,
+        white 10%,
+        rgba(9, 164, 185, 0.726) 10%
+    );
+    --contacto-formulario-border: black;
+    --contacto-formulario-bgcolor:rgb(194, 194, 204);
+    --contacto-formulario-legend-border:#8b8057;
+    --contacto-formulario-datos-border-1: #72706b;
+    --contacto-formulario-datos-border-2: white;
+    --contacto-boton-color:white;
+    --contacto-boton-bgcolor:rgb(114, 111, 111);
+    --contacto-boton-border: white;
+    --contacto-boton-boxshadow: rgba(0, 0, 0, 0.5);
+    --contacto-boton-hover-bgcolor:  #47808f;
 
-    --fuente-secundaria: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    --font-size-2: clamp(16px, 10px + 1.2vw, 20px); 
-    /* 16px a 20px */
+    ----font-family-2: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-size-0: clamp(14px, 10px + 1vw, 16px);
+    --font-size-1: clamp(16px, 10px + 1.1vw, 18px);
+    --font-size-2: clamp(16px, 10px + 1.2vw, 20px);
+    --font-size-3: clamp(16px, 10px + 1.3vw, 24px); 
 
 }
 
@@ -585,40 +607,31 @@ header {
 ------------- FIN ESTRELLAS ------------------
 */
 
-/*
-------------- INICIO CONTACTO ------------------ 
-*/
-.contacto {
-position: relative;
-top: 100px;
-width: 100%;
-height: auto;
-margin-bottom: 180px;
-background-image: linear-gradient(
-    to left bottom,
-    rgba(15, 125, 129, 0.726) 20%,
-    white 10%,
-    white 20%,
-    rgba(5, 4, 24, 0.733) 80%,
-    white 10%,
-    rgba(9, 164, 185, 0.726) 10%
-);
+/*--------------------FIN:CONTACTO--------------------*/
 
+.contacto {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 110px;
+    padding-bottom: 250px;
+    background-image: var(--contacto-bgimage);
 }
 
 .contacto-h1 {
     height:8vh;
     min-height: 40px;
     margin-bottom: 20px;
-    padding-top: 2vh;
-    padding-bottom: 2.3vh;
-    font-size: 18px;
-    font-size: clamp(14px, 20px, 3vw);
-    color: var(--principalh3texto);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-3);
+    color: var(--h1-color);
     text-align: center;
     letter-spacing: 8px;
-    background-color: var(--principalh3fondo);
-    outline: 2px solid var(--principalh3outline);
+    background-color: var(--h1-bgcolor);
+    outline: 2px solid var(--h1-outline);
     outline-offset: -8px;  
 }
 
@@ -626,7 +639,7 @@ background-image: linear-gradient(
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
-    font-family: var(--fuente-secundaria);   
+    font-family: var(--font-family-2);   
     font-size: var(--font-size-2);
 }
 
@@ -639,19 +652,15 @@ background-image: linear-gradient(
   text-align: justify;
 }
 
+/*-----Inicio: contacto formulario-----*/
 
 .contacto-formulario {
     margin-left: 10vw;
     margin-right: 10vw;
     padding: 20px;
-    border: 2px solid black;
     font-weight: bold;
-    background-color: rgb(194, 194, 204);
-}
-
-.contacto-formulario *{
-    display: block;
-    /* margin-top: 10px; */
+    border: 2px solid var(--contacto-formulario-border);
+    background-color: var(--contacto-formulario-bgcolor);
 }
 
 .contacto-formulario fieldset {
@@ -659,120 +668,133 @@ background-image: linear-gradient(
     margin-bottom: 30px;
 }
 
-.contacto-formulario fieldset *{
-    margin-right: auto;
-    margin-left: auto;
-}
 .contacto-formulario legend {
     padding: 15px 20px;
-    text-align: center;
-    border-bottom: 2px solid #8b8057;
-    border-top: 2px solid #8b8057;
     letter-spacing: 2px;
+    text-align: center;
+    border-top: 2px solid var(--contacto-formulario-legend-border);
+    border-bottom: 2px solid var(--contacto-formulario-legend-border);
 }
 
 .contacto-formulario-datos label {
     width: 250px;
-    font-size: 16px;
-    padding: 4px;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
+    font-size: 16px;
     text-align: center;  
+    display: block;
 }
 
 .contacto-formulario-datos input,
 .contacto-formulario-datos select,
 .contacto-formulario-datos textarea {
-    width: 250px;
-    padding:7px;
-    font-size: 18px;
-    border-top: 2px solid #72706b;
-    border-bottom: 2px solid #75746f;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    margin-bottom: 25px;
-    margin-right: auto;
+    width: max(230px, 38vw);
+    max-width: 450px;
     margin-left: auto;
+    margin-right: auto;
+    padding: 7px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    border-top: 2px solid var(--contacto-formulario-datos-border-1);
+    border-bottom: 2px solid var(--contacto-formulario-datos-border-1);
+    border-left: 2px solid var(--contacto-formulario-datos-border-2);
+    border-right: 2px solid var(--contacto-formulario-datos-border-2);
+    display: block;
 }
 
-.contacto-formulario-datos input:hover,
-.contacto-formulario-datos select:hover {
-    border: 2px solid white;
-    width: 260px;
-}
 
 .contacto-contenido fieldset p {
     padding: 10px;
     font-size: 16px;
     line-height: 28px;  
-    text-indent: 30px;
     text-align: center;
 }
 
 .contacto-formulario-radio {
-    text-align: center;
     padding-top: 5px;
-    padding-bottom: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.contacto-formulario-radio input{
-    display: inline-block;
-    margin-right: 1vw;
-    height: 25px;
+.contacto-formulario-radio input {
     width: 25px;
+    height: 25px;
+    margin-left: 1vw;
+    display: inline-block;
 }
 
 .contacto-formulario-radio label {
-    display: inline-block;
-    padding: 5px 1vw 20px;
+    padding-left: 10px;
+    padding-right: 20px;
     font-size: 16px;
+    display: inline-block;
 }
 
 .contacto-formulario-checkbox {
     font-size: 16px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     align-content: space-around;
 }
 
 .contacto-formulario-checkbox input{
-    display: inline-block;
     width: 25px;
     height: 25px;
     margin-top: 5px;
     margin-bottom: 10px;  
     margin-right: 15px;
+    display: inline-block;
 }
+
 .contacto-formulario-checkbox label{
     padding-left: 10px;
-    margin:0px;
     font-size: 16px;
 }
 
 .contacto-formulario-checkbox label:nth-child(5) {
-    font-size: 14px;
+    padding-bottom: 10px;
+    font-size: var(--font-size-0);
 }
+
+@media(hover: hover) and (pointer: fine){
+    .contacto-formulario-datos input:hover,
+    .contacto-formulario-datos select:hover {
+        width: max(250px, 40vw);
+        max-width: 470px;
+        border: 2px solid var(--contacto-formulario-datos-border-2);
+    }
+
+    .contacto-formulario-estrellas input:hover {
+        transform: scale(1.1);
+    }
+}
+
+/*-----Fin: contacto formulario-----*/
+
+/*-----Inicio: contacto botones-----*/
 
 .boton-enviar,
 .boton-reiniciar {
+    display: block;
     width: 200px;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    font-size: 20px;
     margin-bottom: 20px;
-    border-radius: 3px;
+    font-size: 20px;
     font-weight: bold;
-    background-color: rgb(96, 201, 201);
-    background-color: #8b8057;
-    color: white;
-    border: 1px solid rgba(148, 153, 82, 0.541);
-    border-bottom: 2.5px solid rgb(255, 255, 255);
+    text-align: center;
+    letter-spacing: 1.7px;
+    color: var(--contacto-boton-color);
+    background-color: var( --contacto-boton-enviar-bgcolor);
+    border: 1px solid var( --contacto-boton-enviar-bgcolor);
+    background-color:var(--contacto-boton-bgcolor);
+    border-bottom: 2.5px solid var(--contacto-boton-border);
+    box-shadow: 5px 5px 10px var(--contacto-boton-boxshadow);
     cursor: pointer;
-    letter-spacing: 1.5px;
-    box-shadow: -2px 2px 2px 2px rgba(1, 23, 32, 0.274); 
     transition: background-color 0.3s 0.8s;
 }
 
@@ -782,25 +804,12 @@ background-image: linear-gradient(
     transition: all 0.3s;
 }
 
-.boton-enviar:hover {
-   border: 0.5px solid white;
-   background-color: #47808f;
-    
-}
-
-.boton-reiniciar:hover{
-    opacity: 0.8;
-    background-color: #47808f;
-    border: 0.5px solid white;
-}
-
 .efecto-boton {
     margin-left: auto;
     margin-right: auto;
     width: 200px;
     position:relative;
 }
-
 
 .efecto-boton::after {
     content: "";
@@ -809,24 +818,34 @@ background-image: linear-gradient(
     left: 0;
     width: 0;
     height: 0;
-    background-color: rgba(7, 54, 77, 0.87);
-    background-color: #47808f;
-    border-left: 0.5px solid white;
+    background-color: var(--contacto-boton-hover-bgcolor);
+    border-left: 0.5px solid var(--contacto-boton-border);
     transition: all 0.9s;  
 }
 
-.efecto-boton:hover::after {
-    width: 99%;
-    height: 5px; 
-  }
+@media(hover: hover) and (pointer: fine) {
+    .boton-enviar:hover,
+    .boton-reiniciar:hover {
+        background-color: var(--contacto-boton-hover-bgcolor);  
+        border: 0.5px solid var(--contacto-boton-border);
+    }
 
-/* 
-------------- FIN CONTACTO ------------------  
-*/
+    .boton-reiniciar:hover{
+        opacity: 0.8;
+    }
 
-/* 
------------- INICIO FOOTER ----------
-*/
+    .efecto-boton:hover::after {
+        width: 99%;
+        height: 5px; 
+    }  
+}
+
+/*-----Fin: contacto botones-----*/
+
+/*--------------------FIN:CONTACTO--------------------*/
+
+
+/*--------------------INICIO:FOOTER--------------------*/
 
 footer {
     width: 100%;
@@ -980,7 +999,7 @@ footer {
 @media (max-width: 1080px){
     header,
     .nav {
-        height: 70px;
+        height: 100px;
     }
 
     .principal-contenido {
@@ -1130,10 +1149,21 @@ footer {
 
 @media (max-width: 720px){
 
-    .estrellas-bio {
-        flex-wrap: wrap;
+    header,
+    .nav {
+        height: 60px;
     }
-    
+
+    .agencia,
+    .estrellas,
+    .contacto {
+        top: 60px;
+    }
+
+    .estrellas-bio {
+            flex-wrap: wrap;
+        }
+
     .estrellas-bio-img {
         width: auto;
         height: 70vw;

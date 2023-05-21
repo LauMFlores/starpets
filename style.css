@@ -61,7 +61,15 @@
     --estrellas-h3-bgcolor: #2aa7b3b3;
 
 /* -----Estrellas Bio----- */
+    --estrellas-bio-bgimage: repeating-linear-gradient(
+            to bottom left,
+            rgba(56, 104, 122, 0.781) 10%,
+            white 30%,
+            rgba(45, 162, 177, 0.514) 160%
+        );
     --estrellas-bio-img-border: #000000;
+    --estrellas-bio-texto-span: #49492f;
+    --estrellas-bio-texto-span-border: 1px solid #979931;
 
 /* -----Estrellas Talentos----- */
     --estrellas-talentos-border: #000000;
@@ -451,6 +459,7 @@ header {
     padding: 0;
     display: flex;
     align-items: center;
+    background-image: var(--estrellas-bio-bgimage);
 }
 
 .estrellas-bio-img {
@@ -469,6 +478,25 @@ header {
     font-family: var(--font-family-2);
 }
 
+.estrellas-bio-texto p { 
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.estrellas-bio-texto ul{
+   padding-left: 30px;
+}
+
+.estrellas-bio-texto li {
+    margin-bottom: 10px;
+    font-style: italic; 
+    list-style: circle;
+}
+
+.estrellas-bio-texto span{
+    color: var(--estrellas-bio-texto-span);
+    border-bottom: var(--estrellas-bio-texto-span-border);
+}
 
 /* ----- estrellas: talentos ----- */
 

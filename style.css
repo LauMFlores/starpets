@@ -1,36 +1,57 @@
 :root {
-    --headergradiente1:#000000e7;
-    --headergradiente2:#252121dc;
-    --headergradiente3:#f8f8f8;
-    --headertexto:#ffffff;
-    --headerhover:#ffffff44;
+/* ----- Fuentes ----- */
+    --font-size-0: clamp(14px, 10px + 1vw, 16px);
+    --font-size-1: clamp(16px, 10px + 1.1vw, 18px);
+    --font-size-2: clamp(16px, 10px + 1.2vw, 20px);
+    --font-size-3: clamp(16px, 10px + 1.3vw, 24px);
+    --font-size-4: clamp(18px, 10px + 1.2vw, 22px);
+    --font-size-5: clamp(14px, 10px + 1.1vw, 26px);
+    --font-size-6: clamp(14px, 10px + 1.2vw, 30px);
+    --font-size-7: clamp(22px, 18px + 1.3vw, 30px);
+    --font-size-8: clamp(24px, 18px + 1.6vw, 32px);
+    --font-size-9: clamp(16px, 8px + 1.3vw, 32px);
+    --font-family-1: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --font-family-2: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+/* -----Header----- */
+    --header-bgimage: linear-gradient(
+        #000000e7 60%,
+        #252121dc 80%, 
+        #f8f8f8
+       );
+    --header-color:#ffffff;
+    --header-hover-bgcolor:#ffffff44;
 
-    --principalh1fondo: #000000;
-    --principalh1texto: #a09b82;
-    --principalh1sombra:#daa520a2;
+/* -----Principal----- */
+    --principal-presentacion-bgcolor: #252121dc;
+    --principal-presentacion-texto-bgcolor: #000000;
+    --principal-presentacion-texto-color: #a09b82;
+    --principal-presentacion-texto-textshadow: 10px -5px 10px #daa520a2;
+
+/* -----Titulos Generales----- */
     --h1-color: #ffffff;
     --h1-bgcolor: #000000;
     --h1-outline:#e6dddd;
 
-    /* ----- estrellas: colores ----- */
+/* -----Estrellas ----- */
     --estrellas-nav-bgimage: linear-gradient(
             #87cfebcc,
             #16152cb3); 
-     --estrellas-nav-horizontal-bgimage: linear-gradient(
+    --estrellas-nav-horizontal-bgimage: linear-gradient(
             to left,
-            rgba(67, 67, 70, 0.863),
-            rgb(47, 69, 97));
+            #434346dc,
+            #2f4561);
     --estrellas-menu-color: #c0ad72;
     --estrellas-menu-border: #c0ad72;
     --estrellas-menu-textshadow: #533f02;
-    --estrellas-menu-horizontal-textshadow: black;
-    --estrellas-menu-horizontal-boxshadow: -5px 0px 10px rgba(0, 0, 0, 0.7);
+    --estrellas-menu-horizontal-textshadow: #000000;
+    --estrellas-menu-horizontal-boxshadow: -5px 0px 10px #000000b3;
     --estrellas-menu-hover-bgcolor: #87cfebe6;
     --estrellas-menu-horizontal-hover-bgcolor: #2aa7b3b3;
     --estrellas-h2-color: #dadbcf;
     --estrellas-h2-border: #020818;
     --estrellas-h2-textshadow: #533f02;
-    --estrellas-h2-bgcolor: rgba(11, 11, 63, 0.3);
+    --estrellas-h2-bgcolor: #0b0b3f4d;
     --estrellas-h2-bgimage: linear-gradient(
             to right,
             #ffffff80,
@@ -39,53 +60,53 @@
     --estrellas-h3-border: #000000;
     --estrellas-h3-bgcolor: #2aa7b3b3;
 
-    /* ----- estrellas bio: colores ----- */
+/* -----Estrellas Bio----- */
     --estrellas-bio-img-border: #000000;
 
-    /* ----- estrellas talentos: colores ----- */
+/* -----Estrellas Talentos----- */
     --estrellas-talentos-border: #000000;
-    --estrellas-talentos-bgcolor: rgba(66, 98, 110, 0.473);
-    --estrellas-talentos-nombre-bgcolor: rgba(37, 148, 96, 0.664);
-    --estrellas-talentos-nombre-border: rgb(168, 224, 198);
-    --estrellas-talentos-boxshadow: -3px 0px 10px rgba(0, 0, 0, 0.7);
-    --estrellas-talentos-niveles-border: rgb(163, 50, 144);
-    --estrellas-talentos-nivel-ganado: rgb(8, 228, 92);
-    --estrellas-talentos-nivel-no-ganado: rgba(255, 255, 255, 0.5);
+    --estrellas-talentos-bgcolor: #42626e79;
+    --estrellas-talentos-nombre-bgcolor: #40a5acc4;
+    --estrellas-talentos-nombre-border: #686935;
+    --estrellas-talentos-boxshadow: -3px 0px 10px #000000b3;
+    --estrellas-talentos-niveles-border: #686935;
+    --estrellas-talentos-nivel-ganado: #08e45c;
+    --estrellas-talentos-nivel-no-ganado: #ffffff80;
     
-    /* ----- estrellas galeria: colores ----- */
-    --estrellas-galeria-hover-img: black;
+ /* -----Estrellas Galeria----- */
+    --estrellas-galeria-hover-img: #000000;
     --estrellas-galeria-oculto-bgcolor: #000000da;
-    --estrellas-galeria-oculto-border: white;
-    --estrellas-galeria-oculto-color: white;
-    --estrellas-galeria-oculto-hover-bgcolor: rgba(128, 128, 128, 0.753);
+    --estrellas-galeria-oculto-border: #ffffff;
+    --estrellas-galeria-oculto-color: #ffffff;
+    --estrellas-galeria-oculto-hover-bgcolor: #808080c0;
     
     
-    /* ----- contacto: colores ----- */
+/* -----Contacto----- */
      --contacto-bgimage: linear-gradient(
         to left bottom,
-        rgba(15, 125, 129, 0.726) 20%,
-        white 10%,
-        white 20%,
-        rgba(5, 4, 24, 0.733) 80%,
-        white 10%,
-        rgba(9, 164, 185, 0.726) 10%
+        #0f7d81b9 20%,
+        #ffffff 10%,
+        #ffffff 20%,
+        #050418bb 80%,
+        #ffffff 10%,
+        #09a4b9b9 10%
         );
-     --contacto-formulario-border: black;
-    --contacto-formulario-bgcolor:rgb(194, 194, 204);
+    --contacto-formulario-border: #000000;
+    --contacto-formulario-bgcolor:#c2c2cc;
     --contacto-formulario-legend-border:#8b8057;
     --contacto-formulario-datos-border-1: #72706b;
-     --contacto-formulario-datos-border-2: white;
-    --contacto-boton-color:white;
-     --contacto-boton-bgcolor:rgb(114, 111, 111);
-    --contacto-boton-border: white;
-    --contacto-boton-boxshadow: rgba(0, 0, 0, 0.5);
-     --contacto-boton-hover-bgcolor:  #47808f;
+    --contacto-formulario-datos-border-2: #ffffff;
+    --contacto-boton-color:#ffffff;
+    --contacto-boton-bgcolor:#726f6f;
+    --contacto-boton-border: #ffffff;
+    --contacto-boton-boxshadow: #00000080;
+    --contacto-boton-hover-bgcolor:  #47808f;
         
-    /* ----- footer: colores ----- */
+/* -----Footer----- */
     --footerfondo:#f8c3cca9;
     --footerh4bordertop:#000000cc;
-     --footerh4borderbottom:#00000080;
-     --footerh4texto:#000000;
+    --footerh4borderbottom:#00000080;
+    --footerh4texto:#000000;
     --footergradiente1:#dce2c3cc;
     --footergradiente2:#f09dc6c5;
     --footergradiente3:#f1bde4b4;
@@ -97,23 +118,12 @@
     --footeriframesombra: #000000;
     --footeriframefondotexto: #000000;
     --footeriframetexto:  #ffffff;
-    
-    --color:#fff;
+
     --color:#fff;
 
-    /* ----- Fuentes ----- */
-    --font-size-0: clamp(14px, 10px + 1vw, 16px);
-    --font-size-1: clamp(16px, 10px + 1.1vw, 18px);
-    --font-size-2: clamp(16px, 10px + 1.2vw, 20px);
-    --font-size-3: clamp(16px, 10px + 1.3vw, 24px);
-    --font-size-4: clamp(18px, 10px + 1.2vw, 22px);
-    --font-size-5:clamp(16px, 10px + 1.1vw, 24px);
-    --font-size-6: clamp(22px, 18px + 1.3vw, 30px);
-    --font-size-7: clamp(24px, 18px + 1.6vw, 32px);
-    --font-family-2: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+/* -----Animacion----- */
+    --animacion-principal-color: #ffffff;
 }
-
 
 
 * {
@@ -123,20 +133,12 @@
     list-style: none;
 }
 
-img {
-    max-width: 100%;
-}
+img { max-width: 100%; }
 
-body {
-    background-color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+body { font-family: var(--font-family-1); }
 
 
-/* 
------------- HEADER ------------
-*/
-
+/*-------------------- INICIO HEADER --------------------*/
 header {
     position: absolute;
     z-index: 20;
@@ -149,11 +151,7 @@ header {
     top: 0;
     width: 100%;
     height: 100px;
-    background-image: linear-gradient(
-     var(--headergradiente1) 60%,
-     var(--headergradiente2) 80%, 
-     var(--headergradiente3)
-    );
+    background-image: var(--header-bgimage);
     display: flex;
     gap: 20px;
 }
@@ -178,18 +176,15 @@ header {
 .nav-logo-img:hover {
     filter: invert(1);
     margin-top: 10px;
-
 }
 
 .nav-menu {
+    padding-right: 10px;
     flex-grow: 5;
     display: flex;
-    padding-right: 10px;
 }
 
-.nav-menu-item {
-   flex-grow: 1;
-}
+.nav-menu-item {flex-grow: 1;}
 
 .nav-menu-link {
     display: block;
@@ -197,40 +192,34 @@ header {
     height: 100%;
     padding-top: 26px;
     font-size: 22px;
-    font-size: clamp(14px, 8px + 1.2vw, 30px);
-    color: var(--headertexto);
+    font-size: var(--font-size-6);
+    color: var(--header-color);
     text-decoration: none;
     text-align: center;
-    letter-spacing: 5px;
-    letter-spacing: 0.3vw;
-
+    letter-spacing: 0.2vw;
     transition: all 0.8s;
 }
 
 .nav-menu-link:hover {
     padding-top: 40px;
     font-size: 26px;
-    font-size: clamp(16px, 8px + 1.3vw, 32px);
+    font-size: var(--font-size-9);
     letter-spacing: max(5px, 0.6vw);
-    background-color: var(--headerhover);
-    border-right: 3px solid var(--headergradiente3)
-    /* text-decoration: underline; */
+    background-color: var(--header-hover-bgcolor);
+    border-right: 3px solid var(--header-color);
 }
 
-/* 
------------- FIN HEADER ------------
-*/
+/*-------------------- FIN HEADER --------------------*/
 
-/* 
------------- INICIO PRINCIPAL ----------
-      ----- inicio pricipal: presentacion ----
-*/
+/*-------------------- INICIO PRINCIPAL --------------------*/
+
+/* ---- pricipal: presentacion ----- */
 
 .principal-presentacion {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: var(--headergradiente2);
+    background-color: var(--principal-presentacion-bgcolor);
 }
 
 .principal-presentacion-img {
@@ -249,18 +238,15 @@ header {
     flex-direction: column;
     gap: 2vh;
     font-size: 2.2vh;
-    color: var(--principalh1texto);
-    text-shadow: 10px -5px 10px var(--principalh1sombra);
+    color: var(--principal-presentacion-texto-color);
+    text-shadow: var(--principal-presentacion-texto-textshadow);
     text-align: center;
-    letter-spacing: 12px; 
     letter-spacing: 1.8vh;
-    background-color: var(--principalh1fondo);
-    opacity: 0.75;
+    background-color: var(--principal-presentacion-texto-bgcolor);
+    opacity: 0.85;
 }
 
-/* 
-        --- inicio principal:contenido ---- 
-*/
+/* ----- principal: contenido ---- */
 
 .principal-contenido {
     width: 80%;
@@ -294,7 +280,7 @@ header {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-family-2);
     text-indent: 20px;
     line-height: 200%;
     text-align: justify;   
@@ -305,10 +291,7 @@ header {
     margin-bottom: 80px;
 }
 
-/*----- fin principal:contenido ----*/ 
-
 /*--------------------FIN:PRINCIPAL--------------------*/
-
 
 /*--------------------INICIO:AGENCIA--------------------*/
 
@@ -334,9 +317,7 @@ header {
     outline-offset: -8px;
 }
 
-.agencia-contenido {
-    text-align: center;
-}
+.agencia-contenido { text-align: center; }
 
 /*--------------------FIN:AGENCIA --------------------*/
 
@@ -369,13 +350,11 @@ header {
     grid-column: span 2;
 }
 
-/*----- Inicio: estrellas botonera -----*/
+/* ----- estrellas: botonera ----- */
 #milo,
 #odin,
 #rosita,
-#jade {
-    scroll-margin-top: 220px;
-}
+#jade { scroll-margin-top: 220px; }
 
 .estrellas-nav {
     position: sticky;
@@ -416,7 +395,7 @@ header {
     border: none;
 }
 
-/*----- fin: estrellas botonera -----*/
+/* ----- estrellas: contenido ----- */
 
 .estrellas-mascota {
     width: 1300px;
@@ -460,7 +439,7 @@ header {
     background-color: var(--estrellas-h3-bgcolor);
 }
 
- /* --------------Inicio:estrellas bio------------- */
+ /* ----- estrellas: bio ----- */
 
  .estrellas-bio {
     width: 90%;
@@ -487,11 +466,11 @@ header {
 
 .estrellas-bio-texto {
     padding: 16px;
+    font-family: var(--font-family-2);
 }
 
-/* ----------- Fin: estrellas bio ----------- */
 
-/* --------------Inicio:estrellas talentos------------- */
+/* ----- estrellas: talentos ----- */
 
 .estrellas-talentos {
     width: 80%;
@@ -506,8 +485,7 @@ header {
     gap: 20px;
     align-items: center;
     border: 3px solid var(--estrellas-bio-img-border);
-    background-color: var(--estrellas-talentos-bgcolor);
-    
+    background-color: var(--estrellas-talentos-bgcolor);  
  }   
 
 .talento-nombre {
@@ -515,10 +493,12 @@ header {
     margin-left: 10px;
     margin-bottom: 5px;
     font-size: var(--font-size-5);
+    font-style: italic;
     text-align: center;
     letter-spacing: 0.2vw;
     box-shadow: var(--estrellas-talentos-boxshadow);
-    border: 3.5px solid var(--estrellas-talentos-nombre-border);
+    border-top: 3.5px solid var(--estrellas-talentos-nombre-border);
+    border-bottom: 3.5px solid var(--estrellas-talentos-nombre-border);
     background-color: var( --estrellas-talentos-nombre-bgcolor);
     opacity: 0.8;
 }
@@ -534,7 +514,7 @@ header {
     flex-grow: 1;
     text-align: center;
     box-shadow: var(--estrellas-talentos-boxshadow);
-    border: 1.5px solid var(--estrellas-talentos-niveles-border);
+    border: 2.5px solid var(--estrellas-talentos-niveles-border);
     border-radius: 2px;  
     background-color: var(--estrellas-talentos-nivel-no-ganado);
 }
@@ -543,9 +523,8 @@ header {
     background-color: var( --estrellas-talentos-nivel-ganado);
 }
 
-/* ----------- Fin: estrellas talentos ----------- */
 
-/* --------------Inicio:estrellas galeria------------- */
+/* ----- estrellas: galeria ----- */
 
 .estrellas-galeria {
     width: 90%;
@@ -642,12 +621,10 @@ header {
     }
 }
 
-/* ----------- Fin: estrellas galeria ----------- */
-/* 
-------------- FIN ESTRELLAS ------------------
-*/
 
-/*--------------------FIN:CONTACTO--------------------*/
+/*-------------------- FIN: ESTRELLAS --------------------*/
+
+/*-------------------- INICIO: CONTACTO --------------------*/
 
 .contacto {
     position: relative;
@@ -692,7 +669,7 @@ header {
   text-align: justify;
 }
 
-/*-----Inicio: contacto formulario-----*/
+/*----- contacto: formulario -----*/
 
 .contacto-formulario {
     margin-left: 10vw;
@@ -812,9 +789,7 @@ header {
     }
 }
 
-/*-----Fin: contacto formulario-----*/
-
-/*-----Inicio: contacto botones-----*/
+/*----- contacto: botones -----*/
 
 .boton-enviar,
 .boton-reiniciar {
@@ -880,12 +855,10 @@ header {
     }  
 }
 
-/*-----Fin: contacto botones-----*/
-
-/*--------------------FIN:CONTACTO--------------------*/
+/*-------------------- FIN: CONTACTO --------------------*/
 
 
-/*--------------------INICIO:FOOTER--------------------*/
+/*-------------------- INICIO: FOOTER --------------------*/
 
 footer {
     width: 100%;
@@ -1009,13 +982,13 @@ footer {
     opacity: 0.7;
 }
 
-/* 
------------- FIN FOOTER ----------
-*/
+/*-------------------- FIN: FOOTER --------------------*/
 
 
 /* 
----------- Mediaqueries ----------
+-------------------- Mediaqueries: Responsive --------------------
+Breakpoints: 1600px | 1080px | 720px | 450px | 550px Horizontal
+
 */
 
 @media (max-width: 1600px) {
@@ -1133,7 +1106,7 @@ footer {
         position: sticky;
         top: 160px;
         height: 50px;
-        font-size: var(--font-size-7);
+        font-size: var(--font-size-8);
         border: 2px solid var(--estrellas-h2-border);
         letter-spacing: 15px;
     }
@@ -1142,7 +1115,7 @@ footer {
         height: 50px;
         width: auto;
         margin-top: 30px;
-        font-size: var(--font-size-6);
+        font-size: var(--font-size-7);
         letter-spacing: 0.8vw;
      }
      
@@ -1158,6 +1131,11 @@ footer {
         height: 60px;
     }
 
+    .nav-menu-link:hover {
+        padding-top: 30px;
+        font-size: var(--font-size-5);
+    }
+
     .agencia,
     .estrellas,
     .contacto {
@@ -1165,16 +1143,16 @@ footer {
     }
 
     .estrellas-bio {
-            flex-wrap: wrap;
-        }
+        flex-wrap: wrap;
+    }
 
-        .estrellas-bio-img {
-            width: auto;
-            height: 70vw;
-            max-height: 353px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 10px;
+    .estrellas-bio-img {
+        width: auto;
+        height: 70vw;
+        max-height: 353px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
         border: 4px solid black;
         border-radius: 40px;
     }
@@ -1260,6 +1238,11 @@ footer {
         height: 60px;
     }
 
+    .nav-menu-link:hover {
+        padding-top: 30px;
+        font-size: var(--font-size-5);
+    }
+
     .agencia,
     .estrellas,
     .contacto {
@@ -1275,47 +1258,48 @@ footer {
         position: relative;
         top: 0;
     }
-
 }
 
-/* ----------animation principal------------- */
+/*-------------------- FIN: Mediaqueries --------------------*/
 
-   .animation-scroll {
+
+/*-------------------- ANIMACION: PRINCIPAL --------------------*/
+
+   .principal-animacion-scroll {
         position: absolute;
         top: 90%;
         left: 90%;
         transform: translate(-50%, -50%);
     }
         
-    .animation-scroll span {
+    .principal-animacion-scroll span {
         display: block;
         width: 2.5vw;
         height: 2.5vw;
-        border-bottom: 2px solid white;
-        border-right: 2px solid white;
+        border-bottom: 2px solid var(--animacion-principal-color);
+        border-right: 2px solid var(--animacion-principal-color);
         transform: rotate(45deg);
         margin: -10px;
-        animation: animate-scroll 3s infinite;
+        animation: animacion-scroll 3s infinite;
     }
         
-    .animation-scroll span:nth-child(2) {
+    .principal-animacion-scroll span:nth-child(2) {
         animation-delay: -0.2s;
     }
         
-    .animation-scroll span:nth-child(3) {
+    .principal-animacion-scroll span:nth-child(3) {
         animation-delay: -0.4s;
     }
         
-    @keyframes animate-scroll{
-            
-        0%{
+    @keyframes animacion-scroll {     
+        0% {
             opacity: 0;
             transform: rotate(45deg) translate(-20px, -20px);
         }
-        50%{
+        50% {
             opacity: 1;
         }
-        100%{
+        100% {
             opacity: 0;
             transform: rotate(45deg) translate(20px, 20px);
         }

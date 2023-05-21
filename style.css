@@ -65,8 +65,8 @@
 
 /* -----Estrellas Talentos----- */
     --estrellas-talentos-border: #000000;
-    --estrellas-talentos-bgcolor: #42626e79;
-    --estrellas-talentos-nombre-bgcolor: #40a5acc4;
+    --estrellas-talentos-bgcolor: #42626e5b;
+    --estrellas-talentos-nombre-bgcolor: #40a5aca9;
     --estrellas-talentos-nombre-border: #686935;
     --estrellas-talentos-boxshadow: -3px 0px 10px #000000b3;
     --estrellas-talentos-niveles-border: #686935;
@@ -103,7 +103,7 @@
     --contacto-boton-hover-bgcolor:  #47808f;
         
 /* -----Footer----- */
-    --footerfondo:#f8c3cca9;
+    --footer-bgcolor:#f8c3cca9;
     --footerh4bordertop:#000000cc;
     --footerh4borderbottom:#00000080;
     --footerh4texto:#000000;
@@ -497,8 +497,8 @@ header {
     text-align: center;
     letter-spacing: 0.2vw;
     box-shadow: var(--estrellas-talentos-boxshadow);
-    border-top: 3.5px solid var(--estrellas-talentos-nombre-border);
-    border-bottom: 3.5px solid var(--estrellas-talentos-nombre-border);
+    border-top: 2.5px solid var(--estrellas-talentos-nombre-border);
+    border-bottom: 2.5px solid var(--estrellas-talentos-nombre-border);
     background-color: var( --estrellas-talentos-nombre-bgcolor);
     opacity: 0.8;
 }
@@ -868,11 +868,16 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3vw;
-    /* gap:0; */
+    background-color: var(--footer-bgcolor);
+}
+
+.footer-contenedor {
+    border-right: 1px solid var(--footerborderright);
+    border-left: 1px solid var(--footerborderright);
     background-color: var(--footerfondo);
 }
 
-.footer-contenedor h4 {
+.footer-contenedor-nombre {
     height: 7vh;
     min-height: 45px;
     margin-bottom: 1.5vw;
@@ -892,12 +897,6 @@ footer {
       var(--footergradiente3)
     );
     opacity: 0.7;
-}
-
-.footer-contenedor {
-    border-right: 1px solid var(--footerborderright);
-    border-left: 1px solid var(--footerborderright);
-    background-color: var(--footerfondo);
 }
 
 .footer-contenedor-seguinos {
@@ -946,12 +945,6 @@ footer {
 
 .footer-contenedor-escribinos {
     text-align: center;
-}
-
-.material-symbols-outlined {
-    display: block;
-    font-size: 32px;
-    padding-bottom: 5px;
 }
 
 .footer-contenedor-escribinos p {

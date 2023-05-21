@@ -33,15 +33,17 @@
     </header>
 <!-- FIN HEADER -->
 
+<!-- INICIO CONTENIDO CONTACTO -->
     <div class="contacto">
         <h1 class="contacto-h1">Contacto</h1>
         <div class="contacto-contenido">
             <div class="contacto-contenido-texto">
                 <p>Aquí se encuentra nuestro formulario para que puedas contratar a la mascota elegida para tu proyecto. Por favor, completá con toda la información que creas correspondiente. Nuestros agentes de proyectos analizarán la solicitud y se pondrán en contacto dentro de las 48hs.</p>
             </div> 
-
+            <!-- FORMULARIO -->
             <div class="contacto-formulario">
                 <form action="#">
+                    <!-- FIELDSET 1 -->
                     <fieldset class="contacto-formulario-datos">
                         <legend>Solicitante - Datos Personales -</legend>
                         <label for="nombre">Nombre:</label>
@@ -55,6 +57,7 @@
                         <label for="telefono-alt">Teléfono Alternativo:</label>
                         <input type="tel" name="telefono-alt" id="telefono-alt">
                     </fieldset>
+                    <!-- FIELDSET 2 -->
                     <fieldset class="contacto-formulario-datos">
                         <legend>Proyecto - Información -</legend>
                         <label for="proyecto-tipo">Tipo de Proyecto:</label>
@@ -75,25 +78,20 @@
                         <input type="file" name="proyecto-archivos" id="proyecto-archivos" multiple>
                         <p> (*) Debe incluir explicación detallada del mismo, duración, y de haber seleccionado algún tipo de proyecto de actuación, el guión correspondiente.</p>
                     </fieldset>
+                    <!-- FIELDSET 3 -->
                     <fieldset class="contacto-formulario-estrellas">
                         <legend>Proyecto - Estrella a contratar -</legend>
                         <p>¿Cuántas estrellas necesita contratar?</p>
                         <div class="contacto-formulario-radio">
-
                             <input type="radio" name="contratar-cantidad" id="uno" value="uno" checked >
                             <label for="uno">1</label>
-                            
                             <input type="radio" name="contratar-cantidad" id="dos" value="dos">
                             <label for="dos">2</label>
-                            
                             <input type="radio" name="contratar-cantidad" id="tres" value="tres">
                             <label for="tres">3</label>
-                            
                             <input  type="radio" name="contratar-cantidad" id="cuatro" value="cuatro">
                             <label for="cuatro">4</label>
-
                         </div>
-                        
                         <p>Seleccione su mascota/s deseada:</p>
                         <div class="contacto-formulario-checkbox">
                             <label>
@@ -113,22 +111,23 @@
                             </label>
                        </div> 
                     </fieldset> 
+                    <!-- BOTONES-->
                     <div class="efecto-boton">
-                    <input class="boton-enviar" type="submit" value="Enviar">
+                        <input class="boton-enviar" type="submit" value="Enviar">
                     </div>
                     <div>
-                    <input class="boton-reiniciar" type="reset" value="Reiniciar">
-                    </div>
-                    
+                        <input class="boton-reiniciar" type="reset" value="Reiniciar">
+                    </div>    
                 </form>
             </div>  
         </div>
     </div>
-    
+<!-- FIN CONTENIDO CONTACTO -->   
+
 <!-- INICIO FOOTER -->
     <footer>
         <div class="footer-contenedor">
-            <h4>Seguinos</h4>
+            <p class="footer-contenedor-nombre">Seguinos</p>
             <div class="footer-contenedor-seguinos">
                 <a href="#a" target="_blank">
                     <img src="img/instagram.png" alt="instagram"> 
@@ -142,7 +141,7 @@
             </div>   
         </div>
         <div class="footer-contenedor">
-            <h4>Escribinos</h4>
+            <p class="footer-contenedor-nombre">Escribinos<p>
             <div class="footer-contenedor-escribinos">
                 <img src="img/email.png" alt="email">
                 <p>starpets@starpetsagency.com.ar</p>
@@ -151,15 +150,14 @@
             </div>   
         </div>
         <div class="footer-contenedor">
-            <h4>Visitanos</h4>
+            <p class="footer-contenedor-nombre">Visitanos<p>
             <div class="footer-contenedor-visitanos">
                 <p>Juana Manso 1650, Piso STARPETS, Capital Federal, Argentina. </p>
                 <p>(Solo con cita previa)</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.496962631305!2d-58.36294059843413!3d-34.6168797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334d0ca7e7719%3A0x906b6dbb16ee7294!2sJuana%20Manso%201650%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1682822153471!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicacion de Starpets"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.496962631305!2d-58.36294059843413!3d-34.6168797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334d0ca7e7719%3A0x906b6dbb16ee7294!2sJuana%20Manso%201650%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1682822153471!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Starpets"></iframe>
             </div>
         </div>
     </footer>
 <!-- FIN FOOTER -->
-    
 </body>
 </html>

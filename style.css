@@ -924,7 +924,7 @@ footer {
     min-height: 80px;
     margin: 1vw;
     margin-top: 0;
-    padding: 0 20px;
+    padding: 10px 20px;
     text-align: center;
 }
 
@@ -933,8 +933,7 @@ footer {
     height: 12vh;
     min-height: 65px;;
     max-height: 75px;
-    margin: 1vw;
-    margin-top: 0;
+    margin: 0 1vw 15px;
     padding: 14px; 
     box-shadow: var(--footer-link-boxshadow);
     background-color: var(--footer-link-bgcolor);
@@ -1198,11 +1197,11 @@ footer {
 
     .footer-contenedor-seguinos {
         width: 100%;
-        padding: 0 2vw;
+        padding: 15px 2vw;
         margin: 0;
-        margin-left:10px;
+        margin-left: 0;
         display: flex;
-        gap: 2vw;
+        gap: 3vw;
         justify-content: space-evenly;
     }
 }

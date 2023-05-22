@@ -63,8 +63,8 @@
 /* -----Estrellas Bio----- */
     --estrellas-bio-bgimage: repeating-linear-gradient(
             to bottom left,
-            rgba(39, 66, 75, 0.507) 10%,
-            rgba(3, 51, 90, 0.534) 20%,
+            rgba(39, 66, 75, 0.39) 10%,
+            rgba(3, 51, 90, 0.411) 20%,
             white 20%,
             rgba(195, 194, 204, 0.623) 70%
            
@@ -113,7 +113,7 @@
     --contacto-boton-hover-bgcolor:  #47808f;
         
 /* -----Footer----- */
-    --footer-bgcolor:#1a3e6886;
+    --footer-bgcolor:#1a3e6865;
     --footer-nombre-border:#000000e8;
     --footer-nombre-color:#000000;
     --footer-bgimage: linear-gradient(
